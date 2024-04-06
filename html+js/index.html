@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="./style.css">
+<title>vostok limited test task</title>
+</head>
+<body>
+  <form id="myForm">
+    <label for="city">Город:</label>
+    <select id="city" onchange="updateWorkshops()">
+      <option value="city1">Москва</option>
+      <option value="city2">Санкт-Петербург</option>
+      <option value="city3">Екатеринбург</option>
+    </select><br>
+    
+    <label for="workshop">Цех:</label>
+    <select id="workshop" onchange="updateEmployees()">
+      <option value="workshop1">Цех 1</option>
+      <option value="workshop2">Цех 2</option>
+      <option value="workshop3">Цех 3</option>
+    </select><br>
+    
+    <label for="employee">Сотрудник:</label>
+    <select id="employee">
+      <option value="employee1">Иванов Андрей Михайлович</option>
+      <option value="employee2">Захаров михаил Алексеевич</option>
+    </select><br>
+    
+    <label for="team">Бригада:</label>
+    <select id="team">
+      <option value="team1">Бригада 1</option>
+      <option value="team2">Бригада 2</option>
+      <option value="team3">Бригада 3</option>
+    </select><br>
+    
+    <label for="shift">Смена:</label>
+    <select id="shift">
+      <option value="shift1">Смена 1</option>
+      <option value="shift2">Смена 2</option>
+      <option value="shift3">Смена 3</option>
+    </select><br>
+    
+    <input type="submit" value="Отправить">
+  </form>
+
+<script src="./script.js"></script>
+</body>
+</html>
