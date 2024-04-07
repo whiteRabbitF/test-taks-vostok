@@ -6,7 +6,7 @@ CREATE TABLE Container
  Long INT,
  Width INT,
  Height INT,
- Ves INT,
+ Weight INT,
  IsEmpty BOOLEAN,
  DateOFGetting DATETIME
 );

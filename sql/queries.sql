@@ -6,13 +6,15 @@ SELECT '[' +
                ',"Long":' + CAST(Long AS VARCHAR(10)) + 
                ',"Width":' + CAST(Width AS VARCHAR(10)) + 
                ',"Height":' + CAST(Height AS VARCHAR(10)) + 
-               ',"Ves":' + CAST(Ves AS VARCHAR(10)) + 
+               ',"Weight":' + CAST(Weight AS VARCHAR(10)) + 
                ',"IsEmpty":' + CASE WHEN IsEmpty = 1 THEN 'true' ELSE 'false' END + 
                ',"DateOFGetting":"' + CONVERT(VARCHAR, DateOFGetting, 126) + '"'
-        FROM Container
+        FROM 
+            Container
         FOR XML PATH(''), TYPE
     ).value('.', 'VARCHAR(MAX)'), 1, 1, '') +
-']' AS Container_JSON;
+        ']' 
+        AS Container_JSON;
 
 
 SELECT 
